@@ -1,0 +1,584 @@
+%PDF-1.2
+1 0 obj <<
+/CreationDate(D:20221118113155)
+/Creator(FortesReport Community Edition v4.0.0.1 \251 Copyright © 1999-2021 Fortes Informática)
+>> endobj
+2 0 obj <<
+/Type/Catalog
+/Pages 3 0 R
+>> endobj
+5 0 obj <<
+/Type/Page
+/Parent 3 0 R
+/Resources 4 0 R
+/MediaBox [ 0 0 595.5 842.25 ]
+/Contents 6 0 R
+>> endobj
+6 0 obj <<
+/Length 7 0 R
+>>
+stream
+q
+28.5 769.5 538.5 44.25 re
+W n
+Q
+q
+28.5 769.5 538.5 44.25 re
+W n
+q
+0 0 0 rg
+BT
+/F1 20 Tf
+31.5 783.75 Td
+(Listagem de categorias) Tj
+ET
+Q
+2.25 w
+0 J
+[] 0 d
+0 0 0 RG
+1 1 1 rg
+29.25 775.5 m 
+563.25 775.5 l 
+b
+Q
+q
+28.5 750 538.5 19.5 re
+W n
+Q
+q
+28.5 750 538.5 19.5 re
+W n
+0 w
+1 1 0.8824 rg
+28.5 750 538.5 19.5 re
+f
+0 w
+1 1 0.8824 rg
+48.75 754.5 12.75 12 re
+f
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+50.25 757.5 Td
+(ID) Tj
+ET
+Q
+0 w
+1 1 0.8824 rg
+114.75 754.5 31.5 12 re
+f
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+116.25 757.5 Td
+(NOME) Tj
+ET
+Q
+0 w
+1 1 0.8824 rg
+177.75 754.5 65.25 12 re
+f
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+179.25 757.5 Td
+(SOBRENOME) Tj
+ET
+Q
+0 w
+1 1 0.8824 rg
+282.75 754.5 30 12 re
+f
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+284.25 757.5 Td
+(SEXO) Tj
+ET
+Q
+0 w
+1 1 0.8824 rg
+366.75 754.5 39 12 re
+f
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+368.25 757.5 Td
+(CIDADE) Tj
+ET
+Q
+0 w
+1 1 0.8824 rg
+444.75 754.5 42.75 12 re
+f
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+446.25 757.5 Td
+(ESTADO) Tj
+ET
+Q
+Q
+q
+28.5 722.25 538.5 27.75 re
+W n
+Q
+q
+28.5 722.25 538.5 27.75 re
+W n
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+50.25 729.75 Td
+(41) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+116.25 729.75 Td
+(Alysson) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+179.25 729.75 Td
+(da Silva Lima) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+284.25 729.75 Td
+(Feminino) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+368.25 729.75 Td
+(Uberlândia) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+446.25 729.75 Td
+(Minas Gerais) Tj
+ET
+Q
+Q
+q
+28.5 694.5 538.5 27.75 re
+W n
+Q
+q
+28.5 694.5 538.5 27.75 re
+W n
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+50.25 702 Td
+(42) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+116.25 702 Td
+(Lucas) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+179.25 702 Td
+(Ferrenho) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+284.25 702 Td
+(Masculino) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+368.25 702 Td
+(Uberlândia) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+446.25 702 Td
+(Minas Gerais) Tj
+ET
+Q
+Q
+q
+28.5 666.75 538.5 27.75 re
+W n
+Q
+q
+28.5 666.75 538.5 27.75 re
+W n
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+50.25 674.25 Td
+(46) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+116.25 674.25 Td
+(Maria) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+179.25 674.25 Td
+(Ferrenho) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+284.25 674.25 Td
+(Masculino) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+368.25 674.25 Td
+(Uberlândia) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+446.25 674.25 Td
+(Minas Gerais) Tj
+ET
+Q
+Q
+q
+28.5 639 538.5 27.75 re
+W n
+Q
+q
+28.5 639 538.5 27.75 re
+W n
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+50.25 646.5 Td
+(49) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+116.25 646.5 Td
+(Silvana) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+179.25 646.5 Td
+(de Assis Silva Lima) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+284.25 646.5 Td
+(Feminino) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+368.25 646.5 Td
+(Uberlândia) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+446.25 646.5 Td
+(Pernambuco) Tj
+ET
+Q
+Q
+q
+28.5 611.25 538.5 27.75 re
+W n
+Q
+q
+28.5 611.25 538.5 27.75 re
+W n
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+50.25 618.75 Td
+(50) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+116.25 618.75 Td
+(JV) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+179.25 618.75 Td
+(Silva) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+284.25 618.75 Td
+(Masculino) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+368.25 618.75 Td
+(Uberlândia) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+446.25 618.75 Td
+(Minas Gerais) Tj
+ET
+Q
+Q
+q
+28.5 28.5 538.5 24 re
+W n
+Q
+q
+28.5 28.5 538.5 24 re
+W n
+2.25 w
+0 J
+[] 0 d
+0 0 0 RG
+1 1 1 rg
+29.25 48.75 m 
+565.5 48.75 l 
+b
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+32.25 35.25 Td
+(sexta-feira, 18 de novembro de 2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+535.5 35.25 Td
+(1) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+554.25 35.25 Td
+(1) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 10 Tf
+548.25 35.25 Td
+(/) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+488.25 35.25 Td
+(Página:) Tj
+ET
+Q
+Q
+endstream
+endobj
+7 0 obj
+3895
+endobj
+8 0 obj <<
+/Type/Font/Subtype/TrueType/Name/F1/BaseFont/Arial,Bold
+/FirstChar 30
+/LastChar 255
+/Widths [
+750 750 278 333 474 556 556 889 722 238 333 333 389 584 278 333 278 278 
+556 556 556 556 556 556 556 556 556 556 333 333 584 584 584 611 975 722 
+722 722 722 667 611 778 722 278 556 722 611 833 722 778 667 778 722 667 
+611 722 667 944 667 667 611 333 278 333 584 556 333 556 611 556 611 556 
+333 611 611 278 278 556 278 889 611 611 611 611 389 556 333 611 556 778 
+556 556 500 389 280 389 584 750 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 278 333 556 556 556 556 280 556 333 737 370 556 584 333 
+737 552 400 549 333 333 333 576 556 333 333 333 365 556 834 834 834 611 
+722 722 722 722 722 722 1000 722 667 667 667 667 278 278 278 278 722 722 
+778 778 778 778 778 584 778 722 722 722 722 667 667 611 556 556 556 556 
+556 556 889 556 556 556 556 556 278 278 278 278 611 611 611 611 611 611 
+611 549 611 611 611 611 611 556 611 556 
+]
+/FontDescriptor 10 0 R
+/Encoding/WinAnsiEncoding
+>> endobj
+10 0 obj <<
+/Type/FontDescriptor
+/FontName/Arial,Bold
+/Flags 32
+/FontBBox [ -628 -376 2000 1056 ]
+/MissingWidth 0
+/StemV 73
+/StemH 73
+/ItalicAngle 0
+/CapHeight 500
+/XHeight 250
+/Ascent 905
+/Descent 212
+/Leading 117
+/MaxWidth 2628
+/AvgWidth 479
+>> endobj
+9 0 obj <<
+/Type/Font/Subtype/TrueType/Name/F2/BaseFont/Arial
+/FirstChar 30
+/LastChar 255
+/Widths [
+750 750 278 278 355 556 556 889 667 191 333 333 389 584 278 333 278 278 
+556 556 556 556 556 556 556 556 556 556 278 278 584 584 584 556 1015 667 
+667 722 722 667 611 778 722 278 500 667 556 833 722 778 667 778 722 667 
+611 722 667 944 667 667 611 278 278 278 469 556 333 556 556 500 556 556 
+278 556 556 222 222 500 222 833 556 556 556 556 333 500 278 556 500 722 
+500 500 500 334 260 334 584 750 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 278 333 556 556 556 556 260 556 333 737 370 556 584 333 
+737 552 400 549 333 333 333 576 537 333 333 333 365 556 834 834 834 611 
+667 667 667 667 667 667 1000 722 667 667 667 667 278 278 278 278 722 722 
+778 778 778 778 778 584 778 722 722 722 722 667 667 611 556 556 556 556 
+556 556 889 500 556 556 556 556 278 278 278 278 556 556 556 556 556 556 
+556 549 611 556 556 556 556 500 556 500 
+]
+/FontDescriptor 10 0 R
+/Encoding/WinAnsiEncoding
+>> endobj
+10 0 obj <<
+/Type/FontDescriptor
+/FontName/Arial
+/Flags 32
+/FontBBox [ -665 -325 2000 1040 ]
+/MissingWidth 0
+/StemV 73
+/StemH 73
+/ItalicAngle 0
+/CapHeight 500
+/XHeight 250
+/Ascent 905
+/Descent 212
+/Leading 117
+/MaxWidth 2665
+/AvgWidth 441
+>> endobj
+4 0 obj <<
+/ProcSet [ /PDF/Text/ImageB ]
+/Font <<
+/F1 8 0 R
+/F2 9 0 R
+>>
+/XObject <<
+>>
+>> endobj
+3 0 obj <<
+/Type/Pages
+/Count 1
+/MediaBox [ 0 0 595.5 842.25 ]
+/Kids [ 5 0 R ]
+>> endobj
+xref
+0 11
+0000000000 65535 f
+0000000010 00000 n
+0000000163 00000 n
+0000007032 00000 n
+0000006925 00000 n
+0000000215 00000 n
+0000000332 00000 n
+0000004285 00000 n
+0000004308 00000 n
+0000005621 00000 n
+0000006659 00000 n
+trailer
+<<
+/Size 11
+/Root 2 0 R
+/Info 1 0 R
+>>
+startxref
+7127
+%%EOF

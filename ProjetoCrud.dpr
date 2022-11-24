@@ -1,0 +1,21 @@
+program ProjetoCrud;
+
+uses
+  Vcl.Forms,
+  uPrincipal in 'uPrincipal.pas' {frmPrincipal},
+  uCadastro in 'uCadastro.pas' {frmCadastro},
+  uDataModule in 'uDataModule.pas' {DataModule1: TDataModule},
+  uRelCategoria in 'Relatorio\uRelCategoria.pas' {frmRelCategoria},
+  uRelAgrupado in 'Relatorio\uRelAgrupado.pas' {FRelEstado};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmCadastro, frmCadastro);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TFRelEstado, FRelEstado);
+  Application.Run;
+end.

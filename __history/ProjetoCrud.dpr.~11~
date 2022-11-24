@@ -1,0 +1,21 @@
+program ProjetoCrud;
+
+uses
+  Vcl.Forms,
+  uPrincipal in 'uPrincipal.pas' {frmPrincipal},
+  uCadastro in 'uCadastro.pas' {frmCadastro},
+  uDataModule in 'uDataModule.pas' {DataModule1: TDataModule},
+  uRelConsulta in 'Relatorios-Fortes-Report\uRelConsulta.pas' {frmRelConsulta},
+  uRelatorioFortesReports in 'Relatorio - Fortes Reports\uRelatorioFortesReports.pas' {forRelConsulta};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmCadastro, frmCadastro);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TfrmRelConsulta, frmRelConsulta);
+  Application.Run;
+end.

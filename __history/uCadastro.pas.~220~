@@ -1,0 +1,255 @@
+unit uCadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.DBCtrls,
+  Vcl.ExtCtrls, Vcl.Mask, Vcl.Imaging.pngimage, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  uDataModule, Vcl.TabNotBk, Vcl.Buttons, frxClass, frxDBSet;
+
+type
+  TfrmCadastro = class(TForm)
+    Notebook1: TNotebook;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label10: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label18: TLabel;
+    Edit7: TEdit;
+    Edit8: TEdit;
+    Edit9: TEdit;
+    Edit10: TEdit;
+    Edit11: TEdit;
+    Edit12: TEdit;
+    DBGrid1: TDBGrid;
+    Panel1: TPanel;
+    Button7: TButton;
+    Button5: TButton;
+    Button4: TButton;
+    Button3: TButton;
+    Button1: TButton;
+    BitBtn3: TBitBtn;
+    RadioGroup1: TRadioGroup;
+    frxReport1: TfrxReport;
+    frxDBDados: TfrxDBDataset;
+    procedure voltarClick(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure DBGrid2DblClick(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure BitBtn3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure Limpacampos;
+  end;
+
+var
+  frmCadastro: TfrmCadastro;
+
+implementation
+
+{$R *.dfm}
+
+uses uRelCategoria, uRelAgrupado;
+
+// CODE LIMPA CAMPOS
+procedure TfrmCadastro.Limpacampos();
+begin
+  Notebook1.PageIndex := 0;
+  Edit7.Clear;
+  Edit8.Clear;
+  Edit9.Clear;
+  Edit10.Clear;
+  Edit11.Clear;
+  Edit12.Clear;
+  with DataModule1.ZQuery1 do
+  begin
+    close;
+    sql.Clear;
+    sql.Add('select * from tabela_crud');
+    open;
+    last;
+  end;
+end;
+
+// CODE "INSERT" INSERIR REGISTROS AO MEU BANCO DE DADOS!
+
+procedure TfrmCadastro.voltarClick(Sender: TObject);
+begin
+  try
+    if Edit8.Text = '' then
+    begin
+      ShowMessage('Informe o campo NOME');
+      exit;
+    end;
+    with DataModule1.ZQuery1 do
+    begin
+      close;
+      sql.Clear;
+      sql.Add('insert into tabela_crud (nome, sobrenome, sexo, cidade, estado)');
+      sql.Add('values (:nome, :sobrenome, :sexo, :cidade, :estado)');
+      ParamByname('nome').AsString := Edit8.Text;
+      ParamByname('sobrenome').AsString := Edit9.Text;
+      ParamByname('sexo').AsString := Edit10.Text;
+      ParamByname('cidade').AsString := Edit11.Text;
+      ParamByname('estado').AsString := Edit12.Text;
+      ExecSQL;
+      ShowMessage('Salvo com sucesso');
+      Limpacampos;
+    end;
+
+  except
+    ShowMessage('Não foi possível gravar os dados');
+    exit;
+  end;
+end;
+
+
+
+// CODE PARA CHAMAR A TELA DE "RELATÓRIO" NO BOTÃO DENTRO DO FORMULARIO CADASTRO!
+// ESTOU USANDO O COMPONENTE "BITBTN", POR MOTIVOS DE INSERIR UMA IMAGEM NO BOTÃO!
+
+{ OPÇÃO 1° EU TENHO O "CASE", OPÇÃO 2° EU TENHO O "IF" e "ELSE" }
+
+procedure TfrmCadastro.BitBtn3Click(Sender: TObject);
+begin
+  { 1° }
+  case RadioGroup1.ItemIndex of
+    0:
+      begin
+        frmRelCategoria := TfrmRelCategoria.Create(Self);
+        frmRelCategoria.Relatorio.PreviewModal;
+        frmRelCategoria.Release;
+      end;
+    { Aqui eu chamo a tratativa que fiz no uRelAgrupado(codigo no formRelEstado) }
+    // Tipo de codigo que a AVECOM USA NOS SEUS SISTEMAS!
+    1:
+      begin
+        FRelEstado.exibe;
+      end;
+
+  end;
+
+  {
+    2°
+    if RadioGroup1.ItemIndex = 0 then
+    begin
+    frmRelCategoria:=TfrmRelCategoria.Create(Self);
+    frmRelCategoria.Relatorio.PreviewModal;
+    frmRelCategoria.Release;
+    end
+    else
+    begin
+    showmessage('fazer agrupado');
+    end;
+  }
+end;
+
+{ Codigo do botão 'VOLTAR', assim que executar o botão ele volta para PageIndex0,
+  e nessa execução ele automaticamente limpa os campos a qualquer momento que for
+  executado! }
+procedure TfrmCadastro.Button1Click(Sender: TObject);
+begin
+  Notebook1.PageIndex := 0;
+  Limpacampos;
+end;
+
+// CODE "DELETE" DELETAR UM REGISTRO AO MEU BANCO DE DADOS!
+procedure TfrmCadastro.Button2Click(Sender: TObject);
+begin
+  with DataModule1.ZQuery1 do
+  begin
+    close;
+    sql.Clear;
+    sql.Add('delete from tabela_crud where id =:pnum');
+    ParamByname('pnum').AsInteger := strtoint(Edit7.Text);
+    ExecSQL;
+    Limpacampos;
+  end;
+end;
+
+
+// CODE "UPDATE" PARA ATUALIZAR ALGUM CAMPO NA MINHA TABELA!
+
+procedure TfrmCadastro.Button3Click(Sender: TObject);
+begin
+  try
+    // Se a caixa edit estiver vazia, então apareça uma mensagem de alerta!
+    if Edit8.Text = '' then
+    begin
+      // Mensagem de "ALERTA"
+      ShowMessage('Edite o campo NOME');
+      exit;
+    end;
+    with DataModule1.ZQuery2 do
+    begin
+      close;
+      sql.Clear;
+      sql.Add('update tabela_crud set nome =:pnovo where id =:pnum');
+      ParamByname('pnum').AsInteger := strtoint(Edit7.Text);
+      ParamByname('pnovo').AsString := Edit8.Text;
+      ExecSQL;
+      // Assim que o usuario fizer a atualização no CAMPO NOME, eu quero que limpe todos os campos!
+      // Usando o Codigo que fizemos " LIMPA CAMPOS "
+      Limpacampos;
+    end;
+  except
+
+  end;
+end;
+
+// CHAMAR A PÁGINA(tela de consulta PageIndex1)quando todos os campo 'Edit' estiverem vazios!
+procedure TfrmCadastro.Button5Click(Sender: TObject);
+begin
+  with DataModule1.ZQuery1 do
+  begin
+    close;
+    sql.Clear;
+    sql.Add(' select id,nome,sobrenome ,sexo ,cidade ,estado from tabela_crud ');
+    // Aqui faço uma tratativa de quando eu quiser  chamar o nome para fazer uma consulta!
+    if Edit8.Text <> '' then
+      sql.Add(' where nome like ''%' + UpperCase(Edit8.Text) + '%''');
+    open;
+  end;
+
+  { begin
+    close;
+    sql.Clear;
+    sql.Add('select * from tabela_crud where nome like ''%'+UpperCase(Edit8.Text)+'%''');
+    open;
+    end; }
+
+  // APÓS O end, COLOCAR O °COMPONENTE É A PAGEINDEX recebendo a página " := 1"
+  Notebook1.PageIndex := 1;
+end;
+
+
+
+// CODE LIMPA CAMPO!
+
+procedure TfrmCadastro.DBGrid2DblClick(Sender: TObject);
+begin
+  Edit7.Text := inttostr(DataModule1.ZQuery1.FieldByName('id').AsInteger);
+  Edit8.Text := DataModule1.ZQuery1.FieldByName('nome').AsString;
+  Edit9.Text := DataModule1.ZQuery1.FieldByName('sobrenome').AsString;
+  Edit10.Text := DataModule1.ZQuery1.FieldByName('sexo').AsString;
+  Edit11.Text := DataModule1.ZQuery1.FieldByName('cidade').AsString;
+  Edit12.Text := DataModule1.ZQuery1.FieldByName('estado').AsString;
+  // clicou 2 vezes na tabela para fazer uma modificação, ele automaticamente vai para "PAGEINDEX 0"
+  Notebook1.PageIndex := 0;
+end;
+
+procedure TfrmCadastro.FormShow(Sender: TObject);
+begin
+  Limpacampos;
+end;
+
+end.

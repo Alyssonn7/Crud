@@ -1,0 +1,104 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 279
+  Width = 516
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF16
+    AutoEncodeStrings = True
+    Catalog = ''
+    Properties.Strings = (
+      'controls_cp=CP_UTF16'
+      'AutoEncodeStrings=True')
+    Connected = True
+    HostName = 'ALYSSON\SQLEXPRESS'
+    Port = 0
+    Database = 'crud'
+    User = 'alysson'
+    Password = '123'
+    Protocol = 'mssql'
+    Left = 40
+    Top = 24
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select * from tabela_crud')
+    Params = <>
+    Left = 128
+    Top = 24
+    object ZQuery1id: TIntegerField
+      DisplayWidth = 5
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ZQuery1nome: TWideStringField
+      DisplayWidth = 17
+      FieldName = 'nome'
+      Required = True
+      Size = 50
+    end
+    object ZQuery1sobrenome: TWideStringField
+      DisplayWidth = 20
+      FieldName = 'sobrenome'
+      Required = True
+      Size = 50
+    end
+    object ZQuery1sexo: TWideStringField
+      DisplayWidth = 9
+      FieldName = 'sexo'
+      Required = True
+      Size = 50
+    end
+    object ZQuery1cidade: TWideStringField
+      DisplayWidth = 22
+      FieldName = 'cidade'
+      Required = True
+      Size = 50
+    end
+    object ZQuery1estado: TWideStringField
+      DisplayWidth = 16
+      FieldName = 'estado'
+      Required = True
+      Size = 50
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 208
+    Top = 24
+  end
+  object ZQuery2: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select * from tabela_crud')
+    Params = <>
+    DataSource = DataSource1
+    Left = 128
+    Top = 80
+  end
+  object ZQuery3: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select * from tabela_crud')
+    Params = <>
+    DataSource = DataSource1
+    Left = 128
+    Top = 136
+  end
+  object DtsDados: TDataSource
+    Left = 416
+    Top = 88
+  end
+  object QryDados: TZQuery
+    SQL.Strings = (
+      'select * from tabela_crud'
+      ''
+      'order by estado')
+    Params = <>
+    Left = 416
+    Top = 32
+  end
+end
