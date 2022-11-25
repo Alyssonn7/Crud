@@ -7,7 +7,8 @@ uses
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.DBCtrls,
   Vcl.ExtCtrls, Vcl.Mask, Vcl.Imaging.pngimage, Data.DB, Vcl.Grids, Vcl.DBGrids,
-  uDataModule, Vcl.TabNotBk, Vcl.Buttons, frxClass, frxDBSet;
+  uDataModule, Vcl.TabNotBk, Vcl.Buttons, frxClass, frxDBSet, REST.Types,
+  REST.Client, Data.Bind.Components, Data.Bind.ObjectScope;
 
 type
   TfrmCadastro = class(TForm)
@@ -36,6 +37,13 @@ type
     RadioGroup1: TRadioGroup;
     frxReport1: TfrxReport;
     frxDBDados: TfrxDBDataset;
+    Memo1: TMemo;
+    Label1: TLabel;
+    EditCnpj: TEdit;
+    BtnCnpj: TButton;
+    RESTClient1: TRESTClient;
+    RESTRequest1: TRESTRequest;
+    RESTResponse1: TRESTResponse;
     procedure voltarClick(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -44,6 +52,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
+    procedure BtnCnpjClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -162,7 +171,26 @@ begin
   }
 end;
 
-{ Codigo do botão 'VOLTAR', assim que executar o botão ele volta para PageIndex0,
+//========================================================================================================================
+
+   {CONSUMINDO UMA API DE CNPJ!}
+{1° Passo e limpar meu MEMO, usando o Clear!}
+{2° Passo e chamar meu componente RESTClient e a sua BASEURL, que vai receber o link da API!}
+{3° Passo e chamar meu componente RESTRequest para fazer a requisição das informações da nossa API dando uma "Execute;"}
+{4° Passo chame o seu componente MEMO, para pode exibir as informações da RESTRequest.}
+
+procedure TfrmCadastro.BtnCnpjClick(Sender: TObject);
+begin
+{1°}  Memo1.Clear;
+{2°}  RESTClient1.BaseURL := 'https://publica.cnpj.ws/cnpj/' + EditCnpj.Text;
+{3°}  RESTRequest1.Execute;
+{4°}  Memo1.Lines.Add(RESTRequest1.Response.JSONText);
+end;
+
+//========================================================================================================================
+
+
+ { Codigo do botão 'VOLTAR', assim que executar o botão ele volta para PageIndex0,
   e nessa execução ele automaticamente limpa os campos a qualquer momento que for
   executado! }
 procedure TfrmCadastro.Button1Click(Sender: TObject);

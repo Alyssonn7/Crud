@@ -5,14 +5,14 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage;
+  Vcl.Imaging.pngimage, REST.Types, Data.Bind.Components, Data.Bind.ObjectScope,
+  REST.Client;
 
 type
   TfrmPrincipal = class(TForm)
     Panel1: TPanel;
     Button1: TButton;
     Image1: TImage;
-    Image2: TImage;
     Button2: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);

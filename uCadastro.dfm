@@ -3,8 +3,8 @@ object frmCadastro: TfrmCadastro
   Top = 0
   BorderIcons = [biSystemMenu]
   Caption = 'Cadastro'
-  ClientHeight = 486
-  ClientWidth = 764
+  ClientHeight = 510
+  ClientWidth = 766
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +19,8 @@ object frmCadastro: TfrmCadastro
   object Notebook1: TNotebook
     Left = 0
     Top = 0
-    Width = 764
-    Height = 320
+    Width = 766
+    Height = 336
     Align = alClient
     Color = clWhite
     ParentColor = False
@@ -30,8 +30,8 @@ object frmCadastro: TfrmCadastro
       Top = 0
       Caption = '0'
       object Label3: TLabel
-        Left = 494
-        Top = 181
+        Left = 62
+        Top = 93
         Width = 42
         Height = 14
         Caption = 'Estado'
@@ -43,8 +43,8 @@ object frmCadastro: TfrmCadastro
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 140
-        Top = 241
+        Left = 193
+        Top = 93
         Width = 41
         Height = 14
         Caption = 'Cidade'
@@ -56,8 +56,8 @@ object frmCadastro: TfrmCadastro
         ParentFont = False
       end
       object Label10: TLabel
-        Left = 317
-        Top = 241
+        Left = 62
+        Top = 140
         Width = 30
         Height = 14
         Caption = 'Sexo'
@@ -69,8 +69,8 @@ object frmCadastro: TfrmCadastro
         ParentFont = False
       end
       object Label13: TLabel
-        Left = 317
-        Top = 181
+        Left = 189
+        Top = 45
         Width = 70
         Height = 14
         Caption = 'Sobrenome'
@@ -82,8 +82,8 @@ object frmCadastro: TfrmCadastro
         ParentFont = False
       end
       object Label14: TLabel
-        Left = 140
-        Top = 181
+        Left = 60
+        Top = 45
         Width = 88
         Height = 14
         Caption = 'Primeiro Nome'
@@ -95,8 +95,8 @@ object frmCadastro: TfrmCadastro
         ParentFont = False
       end
       object Label15: TLabel
-        Left = 49
-        Top = 183
+        Left = 9
+        Top = 47
         Width = 14
         Height = 14
         Caption = 'ID'
@@ -108,21 +108,34 @@ object frmCadastro: TfrmCadastro
         ParentFont = False
       end
       object Label18: TLabel
-        Left = 140
-        Top = 71
-        Width = 494
-        Height = 48
+        Left = 260
+        Top = 7
+        Width = 245
+        Height = 24
         Caption = 'CADASTRE SEU CLIENTE'
         Font.Charset = DEFAULT_CHARSET
+        Font.Color = clMaroon
+        Font.Height = -20
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label1: TLabel
+        Left = 392
+        Top = 279
+        Width = 96
+        Height = 16
+        Caption = 'Consultar CNPJ'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -40
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Edit7: TEdit
-        Left = 49
-        Top = 201
+        Left = 9
+        Top = 65
         Width = 32
         Height = 21
         Color = clHighlightText
@@ -135,8 +148,8 @@ object frmCadastro: TfrmCadastro
         TabOrder = 0
       end
       object Edit8: TEdit
-        Left = 140
-        Top = 201
+        Left = 60
+        Top = 65
         Width = 119
         Height = 21
         Font.Charset = DEFAULT_CHARSET
@@ -148,8 +161,8 @@ object frmCadastro: TfrmCadastro
         TabOrder = 1
       end
       object Edit9: TEdit
-        Left = 317
-        Top = 201
+        Left = 189
+        Top = 65
         Width = 171
         Height = 21
         Font.Charset = DEFAULT_CHARSET
@@ -161,9 +174,9 @@ object frmCadastro: TfrmCadastro
         TabOrder = 2
       end
       object Edit10: TEdit
-        Left = 317
-        Top = 261
-        Width = 119
+        Left = 62
+        Top = 160
+        Width = 117
         Height = 21
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clNone
@@ -174,9 +187,9 @@ object frmCadastro: TfrmCadastro
         TabOrder = 3
       end
       object Edit11: TEdit
-        Left = 140
-        Top = 261
-        Width = 119
+        Left = 191
+        Top = 113
+        Width = 120
         Height = 21
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clNone
@@ -187,9 +200,9 @@ object frmCadastro: TfrmCadastro
         TabOrder = 4
       end
       object Edit12: TEdit
-        Left = 494
-        Top = 201
-        Width = 150
+        Left = 62
+        Top = 113
+        Width = 117
         Height = 21
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clNone
@@ -199,6 +212,37 @@ object frmCadastro: TfrmCadastro
         ParentFont = False
         TabOrder = 5
       end
+      object Memo1: TMemo
+        Left = 392
+        Top = 65
+        Width = 345
+        Height = 208
+        Color = cl3DDkShadow
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 6
+      end
+      object EditCnpj: TEdit
+        Left = 392
+        Top = 301
+        Width = 121
+        Height = 21
+        TabOrder = 7
+      end
+      object BtnCnpj: TButton
+        Left = 519
+        Top = 297
+        Width = 75
+        Height = 29
+        Caption = 'Pesquisar'
+        TabOrder = 8
+        OnClick = BtnCnpjClick
+      end
     end
     object TPage
       Left = 0
@@ -207,7 +251,7 @@ object frmCadastro: TfrmCadastro
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
-        Width = 764
+        Width = 766
         Height = 297
         Align = alTop
         Color = clWhite
@@ -266,9 +310,9 @@ object frmCadastro: TfrmCadastro
   end
   object Panel1: TPanel
     Left = 0
-    Top = 320
-    Width = 764
-    Height = 166
+    Top = 336
+    Width = 766
+    Height = 174
     Align = alBottom
     Color = clWhite
     ParentBackground = False
@@ -619,8 +663,8 @@ object frmCadastro: TfrmCadastro
       'begin'
       ''
       'end.')
-    Left = 672
-    Top = 216
+    Left = 320
+    Top = 368
     Datasets = <
       item
         DataSet = frxDBDados
@@ -1051,7 +1095,24 @@ object frmCadastro: TfrmCadastro
     DataSet = DataModule1.QryDados
     BCDToCurrency = False
     DataSetOptions = []
-    Left = 672
-    Top = 264
+    Left = 376
+    Top = 368
+  end
+  object RESTClient1: TRESTClient
+    BaseURL = 'https://publica.cnpj.ws/cnpj'
+    Params = <>
+    Left = 326
+    Top = 159
+  end
+  object RESTRequest1: TRESTRequest
+    Client = RESTClient1
+    Params = <>
+    Response = RESTResponse1
+    Left = 326
+    Top = 208
+  end
+  object RESTResponse1: TRESTResponse
+    Left = 328
+    Top = 256
   end
 end
